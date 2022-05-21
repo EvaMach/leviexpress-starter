@@ -34,12 +34,14 @@ export const Home = () => {
       {journey === null ? null : (
         <>
           <JourneyDetail journey={journey} />
-          <button className=" btn btn--big" onClick={handleBuy}>
-            Rezervovat
-          </button>
+          <SeatPicker seats={journey.seats} journeyId={journey.journeyId} />
+          <div className="controls container">
+            <button className=" btn btn--big" type="button" onClick={handleBuy}>
+              Rezervovat
+            </button>
+          </div>
         </>
       )}
-      <SeatPicker />
     </main>
   );
 };
