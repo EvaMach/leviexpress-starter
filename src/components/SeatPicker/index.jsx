@@ -17,13 +17,13 @@ const testRow = [
   },
 ];
 
-export const SeatPicker = ({ seats, journeyId }) => {
+export const SeatPicker = ({ seats, journeyId, selectedSeat }) => {
   return (
     <div className="seat-picker container">
       <h2>Vyberte sedadlo</h2>
       <div className="seats">
         {seats.map((seat, thisValue) => (
-          <SeatRow key={thisValue} row={seat} />
+          <SeatRow key={thisValue} row={seat} rowSelectedSeat={selectedSeat} />
         ))}
       </div>
     </div>

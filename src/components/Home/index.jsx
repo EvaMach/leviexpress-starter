@@ -34,7 +34,11 @@ export const Home = () => {
       {journey === null ? null : (
         <>
           <JourneyDetail journey={journey} />
-          <SeatPicker seats={journey.seats} journeyId={journey.journeyId} />
+          <SeatPicker
+            seats={journey.seats}
+            journeyId={journey.journeyId}
+            selectedSeat={journey.autoSeat}
+          />
           <div className="controls container">
             <button className=" btn btn--big" type="button" onClick={handleBuy}>
               Rezervovat
