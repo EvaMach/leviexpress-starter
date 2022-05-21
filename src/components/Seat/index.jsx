@@ -1,9 +1,10 @@
 import React from 'react';
 import './style.css';
 
-export const Seat = ({ number, isOccupied, isSelected }) => {
+export const Seat = ({ number, isOccupied, isSelected, onSelect }) => {
   return (
     <svg
+      onClick={() => onSelect(number)}
       className={
         isOccupied
           ? 'seat seat--occupied'
